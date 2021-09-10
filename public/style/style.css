@@ -359,38 +359,7 @@ line-height: 2rem;
     line-height: 2rem;
 }
 
-@media screen and (max-width:576px) {
-    .navbar{
-        flex-direction: column;
-    }
-    .logo{
-        justify-content: center;
-        margin: auto;
-    }
-    .menu{
-        margin-top: 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1FR;
-    }
-    .description_medulin, .description_information{
-        flex-direction: column;
-    }
-    .img_carte_medulin, .txt_medulin{
-        padding-top: 0.5rem;
-        width: auto;
-    }
-    .apt_div_container{
-        flex-direction: column;
-    }
-    .apt_left, .apt_right{
-        width: auto;
-    }
-    .information_tel{
-        position: relative;
-        text-align: start;
-        padding-top: 1rem;
-    }
-}
+
 slider {
     display: block;
     width: 100%;
@@ -574,4 +543,41 @@ color: white;
     30%{left: -100%;width: 100%;}
     30.0001%{left:-100%;width:0%;}
     100%{left: 100%;width: 0%;}
+}
+@media screen and (max-width:576px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: center;
+        margin: auto;
+    }
+    .menu{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1FR;
+    }
+    .description_medulin, .description_information{
+        flex-direction: column;
+    }
+    .img_carte_medulin, .txt_medulin{
+        padding-top: 0.5rem;
+        width: auto;
+    }
+    .apt_div_container{
+        flex-direction: column;
+    }
+    .apt_left, .apt_right{
+        width: auto;
+    }
+    .information_tel{
+        position: relative;
+        text-align: start;
+        padding-top: 1rem;
+    }
+    slider, slider2, slider3{
+        min-height: 340px;
+        position: inherit;
+        margin-bottom: 1rem;
+    }
 }
