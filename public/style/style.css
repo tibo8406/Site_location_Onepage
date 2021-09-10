@@ -412,26 +412,26 @@ slider > *{
 slide:nth-child(1){
     left: 0%;
     animation-delay: -1s;
-    background-image: url(/public/image/apt1/1.jpg);
+    background-image:url(./public/image/apt1/1.jpg);
     background-size: cover;
     background-position: center;
 }
 slide:nth-child(2){
     animation-delay: 2s;
-    background-image: url(/public/image/apt1/2.jpg);
+    background-image: url(./public/image/apt1/2.jpg);
     background-size: cover;
     background-position: center;
 }
 slide:nth-child(3){
     animation-delay: 5s;
-    background-image: url(/public/image/apt1/3.jpg);
+    background-image: url(./public/image/apt1/3.jpg);
     background-size: cover;
     background-position: center;
 }
 slide:nth-child(4){
     left: 0%;
     animation-delay: 8s;
-    background-image: url(/public/image/apt1/4.jpg);
+    background-image: url(./public/image/apt1/4.jpg);
     background-size: cover;
     background-position: center;
 }
