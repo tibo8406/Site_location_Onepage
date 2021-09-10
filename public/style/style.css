@@ -544,6 +544,16 @@ color: white;
     30.0001%{left:-100%;width:0%;}
     100%{left: 100%;width: 0%;}
 }
+@media screen and (max-width:976px){
+    .logo{
+        margin-right: 1rem;
+    }
+    .accueil, .decouvrir, .contact, .medulin{
+        margin: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
 @media screen and (max-width:576px) {
     .navbar{
         flex-direction: column;
