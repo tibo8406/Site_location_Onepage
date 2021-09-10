@@ -7,6 +7,21 @@ html, body{
     font-family: 'Roboto';
     margin: 0;
 }
+#idmedulin, #idappartements, #idaccueil{
+    padding-top: 70px;
+    position: relative;
+    top: -70px;
+    margin-bottom: -70px;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+}
+h2{
+    margin-top: 0;
+}
 .nav__container{
     display: flex;
     margin-bottom: 0.3rem;
@@ -22,6 +37,7 @@ html, body{
     display: flex;
 }
 .menu a{
+    display: flex;
     text-decoration: none;
     color: initial;
 
@@ -42,7 +58,7 @@ html, body{
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.5rem 0 0.5rem;
 }
 
 .pano{
@@ -59,12 +75,24 @@ height: auto;
 }
 
 .best__point{
+    padding-left: 2rem;
+    padding-right: 2rem;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width:992px){
+    .best__point{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:576px) {
+    .best__point{
+        grid-template-columns: 1fr;
+    }
 }
 .bestpoint__txt{
     display: flex;
@@ -79,6 +107,14 @@ border-left: solid 1px gray;
 line-height: 1.5rem;
 height: 100%;
 }
+@media screen and (max-width:576px) {
+    .bestpoint__txt{
+        border-bottom: solid 1px darkgray;
+        border-left: none;
+        border-right: none;
+    }
+    
+}
 
 .map, .wifi, .sea, .parking{
     display: flex;
@@ -88,6 +124,12 @@ height: 100%;
     font-size: 4rem;
     color: rgba(0, 0, 0, 0.050);
 }
+@media screen and (max-width:576px){
+    .map, .wifi, .sea, .parking{
+        padding-top: 1rem;
+    }
+}
+
 
 .container{
     padding-bottom: 1.5rem;
@@ -97,6 +139,8 @@ height: 100%;
     background-color: rgba(0, 0, 0, 0.03);
 }
 .medulin{
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 1400px;
@@ -138,41 +182,400 @@ height: 100%;
     justify-content: space-between;
 }
 .appartement_container{
+    padding-left: 2rem;
+    padding-right: 2rem;
 margin: auto;
     max-width: 1400px;
     display: flex;
     position: relative;
+    flex-direction: column;
+}
+
+
+.apt_left{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 39% ;
+    
+}
+
+.apt_galerie{
+    width: 100%;
+    background-color: black;
+    position:relative;
+}
+
+.slide_img{
+position: absolute;
+z-index: -1;
+display: flex;
+max-width: 100%;
+max-height: 341px;
+}
+.slide_img img{
+    max-width:100%;
+    max-height: 341px;
+    display: flex;
+}
+#i1, #i2, #i3, #i4{
+    display: none;
+}
+.pre, .nxt{
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    background: rgba(88, 88, 88, 0.4);
+    z-index: 99;
+    cursor: pointer;
+    justify-content: center;
+}
+.pre{
+        left: 0;
+        justify-content: center;
+}
+
+.nxt{
+    justify-content: center;
+        right: 0;
+}
+.img_nav{
+        width: 100%;
+        height: 4rem;
+        text-align: center;
+        z-index: 99;
+        margin-top: 2rem;
+        
+}
+@media screen and (max-width:576px){
+.img_nav{
+    display: none;
+    }
+.logo{
+    margin: 0.3rem;
+}
+.accueil, .decouvrir, .appart, .contact{
+    margin-right: 0;
+    margin-left: 0;
+}
+}
+.dots{
+        cursor: pointer;
+        top: -5px;
+        width: 1.25rem;
+        height: 1.25rem;
+        position: relative;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 4px;
+        background: rgba(0, 0, 0, 0.4);
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four {
+    z-index: 9;
+}
+
+#i1:checked ~ .img_nav #dot1,
+#i2:checked ~ .img_nav #dot2,
+#i3:checked ~ .img_nav #dot3,
+#i4:checked ~ .img_nav #dot4{
+background: white;
+}
+.test{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.apt_info{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.apt_div_container{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    max-width: 1440px;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px darkgrey;
+}
+.apt_right{
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    width: 59%;
+text-align: justify;
+line-height: 2rem;
+}
+.apt_img{
+    display: flex;
+    height: 21Rem;
+}
+.apt_info .fas{
+    font-size: 'Roboto';
+    color: darkgrey;
+}
+.footer{
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 3rem;
+
+    background-color: rgba(0, 0, 0, 0.03);
 }
 .information{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
     display:flex;
     flex-direction: column;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .description_information{
     display: flex;
     position: relative;
     flex-direction: row;
-    justify-content: space-between;
 }
 .information_adresse{
     font-size: large;
-    text-align: start;
     text-transform: capitalize;
     line-height: 2rem;
     display: flex;
     position: relative;
-    width: 38%;
     align-items: center;
-    justify-content: center;
 }
 .information_tel{
     text-align: end;
-    text-transform: capitalize;
     font-size: large;
     display: flex;
-    position: relative;
-    width: 58%;
+    position: absolute;
+    right: 0px;
     line-height: 2rem;
+}
+
+@media screen and (max-width:576px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: center;
+        margin: auto;
+    }
+    .menu{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1FR;
+    }
+    .description_medulin, .description_information{
+        flex-direction: column;
+    }
+    .img_carte_medulin, .txt_medulin{
+        padding-top: 0.5rem;
+        width: auto;
+    }
+    .apt_div_container{
+        flex-direction: column;
+    }
+    .apt_left, .apt_right{
+        width: auto;
+    }
+    .information_tel{
+        position: relative;
+        text-align: start;
+        padding-top: 1rem;
+    }
+}
+slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+slider > *{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+
+slide:nth-child(1){
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(/public/image/apt1/1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(2){
+    animation-delay: 2s;
+    background-image: url(/public/image/apt1/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(3){
+    animation-delay: 5s;
+    background-image: url(/public/image/apt1/3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(4){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(/public/image/apt1/4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide p {
+    font-family: 'Roboto';
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+width: 100%;
+margin-top: 160px;
+color: white;
+}
+@keyframes slide {
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25%{left: 0%;}
+    30%{left: -100%;width: 100%;}
+    30.0001%{left:-100%;width:0%;}
+    100%{left: 100%;width: 0%;}
+}
+slider2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+slider2 > *{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1f1f1f;
+    animation: slide2 12s infinite;
+    overflow: hidden;
+}
+
+
+slide2:nth-child(1){
+    left: 0%;
+    animation-delay: 0s;
+    background-image: url(/public/image/apt2/1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide2:nth-child(2){
+    animation-delay: 3s;
+    background-image: url(/public/image/apt2/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide2:nth-child(3){
+    animation-delay: 6s;
+    background-image: url(/public/image/apt2/3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide2:nth-child(4){
+    left: 0%;
+    animation-delay: 9s;
+    background-image: url(/public/image/apt2/4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide2 p {
+    font-family: 'Roboto';
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+width: 100%;
+margin-top: 160px;
+color: white;
+}
+@keyframes slide2 {
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25%{left: 0%;}
+    30%{left: -100%;width: 100%;}
+    30.0001%{left:-100%;width:0%;}
+    100%{left: 100%;width: 0%;}
+}
+slider3 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+slider3 > *{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1f1f1f;
+    animation: slide3 12s infinite;
+    overflow: hidden;
+}
+
+
+slide3:nth-child(1){
+    left: 0%;
+    animation-delay: 1s;
+    background-image: url(/public/image/apt3/1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide3:nth-child(2){
+    animation-delay: 4s;
+    background-image: url(/public/image/apt3/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide3:nth-child(3){
+    animation-delay: 7s;
+    background-image: url(/public/image/apt3/3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide3:nth-child(4){
+    left: 0%;
+    animation-delay: 10s;
+    background-image: url(/public/image/apt3/4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide3 p {
+    font-family: 'Roboto';
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+width: 100%;
+margin-top: 160px;
+color: white;
+}
+@keyframes slide3 {
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25%{left: 0%;}
+    30%{left: -100%;width: 100%;}
+    30.0001%{left:-100%;width:0%;}
+    100%{left: 100%;width: 0%;}
 }
