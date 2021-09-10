@@ -286,11 +286,6 @@ max-height: 341px;
 #i4:checked ~ .img_nav #dot4{
 background: white;
 }
-.test{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-}
 .apt_info{
     display: flex;
     position: relative;
@@ -544,6 +539,7 @@ slide3:nth-child(1){
     background-position: center;
 }
 slide3:nth-child(2){
+
     animation-delay: 4s;
     background-image: url(/public/image/apt3/2.jpg);
     background-size: cover;
