@@ -115,7 +115,7 @@ height: 100%;
     flex-direction: column;
     text-align: center;
     font-size: 4rem;
-    color: rgba(0, 0, 0, 0.050);
+    color: lightgray
 }
 
 
@@ -541,6 +541,9 @@ color: white;
         margin: 0;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+    }
+    .txt_fas {
+        font-size: 2rem;
     }
 }
 @media screen and (max-width:576px) {
